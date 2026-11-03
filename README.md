@@ -1,8 +1,8 @@
-# Rhett — your BU student assistant
+# CampusWizard — your BU student assistant
 
 DS+X 2026 (College track) × Hackachusetts 2026 (Civic Action, challenge V4: Better college experiences).
 
-Rhett helps BU students plan registration around prerequisites and their major, plan their week around classes and clubs, and find the cheapest delivery app for the same order.
+CampusWizard helps BU students plan registration around prerequisites and their major, plan their week around classes and clubs, and find the cheapest delivery app for the same order.
 
 **Live app:** https://ds-x-hackachusetts.vercel.app (no login needed: it opens as a demo CE sophomore; tap "Log in" to create your own account)
 
@@ -11,7 +11,7 @@ Rhett helps BU students plan registration around prerequisites and their major, 
 ## Features
 
 - **Build your schedule:** search any of 7,620 BU courses, see every Fall 2026 section with professor, days, times and room, and watch clashes appear on a live weekly calendar before you add a class. Lectures, discussions and labs are grouped the way BU registers them. Missing prerequisites are flagged from the courses you've taken.
-- **Rhett, an AI assistant** (Gemini with tool calling) that can see your calendar: find sections, add or drop classes, fix clashes, suggest a schedule from your major's planning sheet, plan your week, check your budget and answer commute questions.
+- **CampusWizard, an AI assistant** (Gemini with tool calling) that can see your calendar: find sections, add or drop classes, fix clashes, suggest a schedule from your major's planning sheet, plan your week, check your budget and answer commute questions.
 - **Plan my week:** fits sleep, meals, study, gym and to-dos around classes and clubs; reads club emails and syllabi for meetings, exams and deadlines; exports to Google/Apple Calendar (.ics).
 - **Getting to class:** "leave by" times for every class, walking vs. the Green Line B with live MBTA departures, National Weather Service forecast, reminders.
 - **Money:** semester budget by category with pace projection; log spending from a receipt photo or order email; compare the total cost of the same order on DoorDash, Uber Eats and Grubhub.
@@ -25,13 +25,13 @@ cp .env.example .env.local   # all settings optional, see comments inside
 npm run dev                  # http://localhost:3000
 ```
 
-Without a Gemini key Rhett still works using keyword rules ("add WR 153", "plan my week", "can I take EC 413?", "how's my budget?").
+Without a Gemini key CampusWizard still works using keyword rules ("add WR 153", "plan my week", "can I take EC 413?", "how's my budget?").
 
 ## Testing instructions
 
 1. Open the live app. It starts as a demo Computer Engineering sophomore with freshman year completed.
 2. **Plan:** search "PY 212", pick a lecture, a discussion and a lab, and watch the calendar; then add "MA 226" to see clash warnings.
-3. Tap **Ask Rhett** on the Plan page: "Is there a morning WR 153 section? Add it."
+3. Tap **Ask CampusWizard** on the Plan page: "Is there a morning WR 153 section? Add it."
 4. **Home:** see "Leave by" for the next class; change "Starting from" to West Campus to see the Green Line option.
 5. **Week:** paste a club email, tap "Find events", then "Plan my week" and download the .ics.
 6. **Money:** check the budget pace, paste an order confirmation email, and compare delivery prices.
@@ -75,7 +75,7 @@ Times are minutes after midnight (`545` = 9:05 am). Days are `"Mon"`…`"Sun"`.
 - **MBTA V3 API** (api-v3.mbta.com) for live Green Line departures. Data provided by the MBTA; their terms apply.
 - **National Weather Service API** (api.weather.gov), public domain.
 - **OpenStreetMap / Nominatim** for building coordinates in `data/buildings.json`. © OpenStreetMap contributors, ODbL.
-- **Google Gemini API** for Rhett and document extraction.
+- **Google Gemini API** for CampusWizard and document extraction.
 - Food delivery prices were collected by hand by our team; DoorDash, Uber Eats and Grubhub are trademarks of their owners and are not affiliated with this project.
 
 ## Course data
